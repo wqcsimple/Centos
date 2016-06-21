@@ -1,5 +1,7 @@
 # Centos
 
+`rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm`
+
 ## 新建centos虚拟机初始化配置
 1. 生成`sshkey` 命令 `ssh-keygen`
 2. 保存本地`sshkey` 进行ssh无密登陆 `authorized_keys`
@@ -26,5 +28,9 @@
 
 ```
 ssh-rsaAAAAB3NzaC1yc2EAAAADAQABAAABAQDVNGe8y2be5IqwY2uMLoFR7s6BlTw6WUL24WCZu4Z81BLfthLso6BIys2lebSKBXUWlSeRcisUC45Zr4lJek666th/eZ+yKpGv4cQwRffFKedl36gTLa1R7wtHUh1OtdLiauad5d/8RbA6T6wGeJ6LatONTRFE+vhD1VzY0OTNVX03XNQgUOhz9g+wLHbPpdkhv15pdu5Z8Hi3BCDtmJiBPRy7E1izHYxAoJz6tQqroIvQG6CcJ2WTRGNQC6CVyP+gCQGKFUdD1OBC6O3CNZ/IRm8fuqv6PyAyEyWBmwSx0Zof8x/d6txmMRRwHJG1gRgF7PAEWx8ifwW/M8qCZMlF dev@devdeMacBook-Pro.local
-```    
+```
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVNGe8y2be5IqwY2uMLoFR7s6BlTw6WUL24WCZu4Z81BLfthLso6BIys2lebSKBXUWlSeRcisUC45Zr4lJek666th/eZ+yKpGv4cQwRffFKedl36gTLa1R7wtHUh1OtdLiauad5d/8RbA6T6wGeJ6LatONTRFE+vhD1VzY0OTNVX03XNQgUOhz9g+wLHbPpdkhv15pdu5Z8Hi3BCDtmJiBPRy7E1izHYxAoJz6tQqroIvQG6CcJ2WTRGNQC6CVyP+gCQGKFUdD1OBC6O3CNZ/IRm8fuqv6PyAyEyWBmwSx0Zof8x/d6txmMRRwHJG1gRgF7PAEWx8ifwW/M8qCZMlF dev@devdeMacBook-Pro.local
+```
+
 
