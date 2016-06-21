@@ -20,10 +20,12 @@
 - `cat /etc/shells`   查看当前系统中有几种shell
 - `chsh -s /bin/zsh`  将当前系统的bash shell 切换成zsh
 - `sudo yum install zsh` OR `sudo apt-get install zsh` 如果发现当前系统中没有可进行该命令进行安装，mac下自带
+- `yum install vim`
 - 手动安装    
 `git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh`
 `cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc`
 - `git@github.com:wqcsimple/mac_config.git` OR `https://github.com/wqcsimple/mac_config.git` 个人的配置文件github地址
+- `cd mac_config && cp ./zshrc ../.zshrc && cp ./vimrc ../.vimrc`
 - `wget https://github.com/downloads/joelthelion/autojump/autojump_v21.1.2.tar.gz` 安装autojump，下载完成后解压`tar zxvf filename` 进入目录`./install.sh`, `[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh`将代码加入到`.zshrc`
 
 ```
