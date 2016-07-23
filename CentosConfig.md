@@ -1,3 +1,6 @@
+
+# [Mac_config][1]
+
 # Centos
 
 `rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm`
@@ -40,3 +43,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVNGe8y2be5IqwY2uMLoFR7s6BlTw6WUL24WCZu4Z8
 - `yum install epel-release`
 - `yum install nginx`
 
+
+
+
+[1]: https://github.com/wqcsimple/mac_config
