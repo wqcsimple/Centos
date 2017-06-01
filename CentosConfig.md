@@ -3,7 +3,7 @@
 
 # Centos
 
-`rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm`
+`rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm`
 
 `yum update -y`
 
@@ -45,18 +45,35 @@
 - `wget https://github.com/downloads/joelthelion/autojump/autojump_v21.1.2.tar.gz` 安装autojump，下载完成后解压`tar zxvf filename` 进入目录`./install.sh`, `[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh`将代码加入到`.zshrc`
 
 
-```
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVNGe8y2be5IqwY2uMLoFR7s6BlTw6WUL24WCZu4Z81BLfthLso6BIys2lebSKBXUWlSeRcisUC45Zr4lJek666th/eZ+yKpGv4cQwRffFKedl36gTLa1R7wtHUh1OtdLiauad5d/8RbA6T6wGeJ6LatONTRFE+vhD1VzY0OTNVX03XNQgUOhz9g+wLHbPpdkhv15pdu5Z8Hi3BCDtmJiBPRy7E1izHYxAoJz6tQqroIvQG6CcJ2WTRGNQC6CVyP+gCQGKFUdD1OBC6O3CNZ/IRm8fuqv6PyAyEyWBmwSx0Zof8x/d6txmMRRwHJG1gRgF7PAEWx8ifwW/M8qCZMlF dev@devdeMacBook-Pro.local
-```
+## Centos7 虚拟机配置
+### 安装编译工具包
+`yum groupinstall -y "Development Tools"`
+### 列出服务
+`systemctl list-units --type=service`
+### 设置时区
+`timedatectl set-timezone Asia/Shanghai`
+### 关闭IPV6
+`sysctl -w net.ipv6.conf.all.disable_ipv6=1`
+`sysctl -w net.ipv6.conf.default.disable_ipv6=1`
+### 设置生效
+`sysctl -p`
+### 清空yum临时文件
+`yum clean all`
 
 ## nginx
 - `yum install epel-release`
 - `yum install nginx`
 
-
-
-
 [1]: https://github.com/wqcsimple/mac_config
 
 
 
+##  修改时区
+
+`yum install tzdata -y`
+
+`cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`
+
+`echo "Asia/Shanghai" > /etc/timezone`
+
+`date`
