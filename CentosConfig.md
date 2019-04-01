@@ -3,7 +3,7 @@
 
 # Centos
 
-`rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm`
+`rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm`
 
 `yum update -y`
 
@@ -18,7 +18,7 @@
 1. 生成`sshkey` 命令 `ssh-keygen`
 2. 保存本地`sshkey` 进行ssh无密登陆 `authorized_keys`
 3. 更新yum更新   `yum -y update`
-4. 修改服务器名 `hostnamectl set-hostname whis `
+4. 修改服务器名 `hostnamectl set-hostname whis`
 5. `uname -a` 查看服务器系统
 6. `systemctl stop firewalld.service` 关闭防火墙,根据实际需求来
 7. `vi /etc/resolv.conf` 修改DNS 加上`4.4.4.4`
@@ -37,7 +37,7 @@
 - `cat /etc/shells`   查看当前系统中有几种shell
 - `chsh -s /bin/zsh`  将当前系统的bash shell 切换成zsh
 - `sudo yum -y install zsh` OR `sudo apt-get install zsh` 如果发现当前系统中没有可进行该命令进行安装，mac下自带
-- `yum install vim git`
+- `yum install vim git -y`
 - 手动安装
 `git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc`
 - `git clone git@github.com:wqcsimple/mac_config.git` OR `git clone https://github.com/wqcsimple/mac_config.git` 个人的配置文件github地址
@@ -61,10 +61,26 @@
 `yum clean all`
 
 ## nginx
-- `yum install epel-release`
+- `yum install epel-release -y`
 - `yum install nginx`
 
 [1]: https://github.com/wqcsimple/mac_config
+
+
+## 关闭selinux
+
+1 永久方法 – 需要重启服务器
+
+修改/etc/selinux/config文件中设置SELINUX=disabled ，然后重启服务器。
+
+2 临时方法 – 设置系统参数
+
+使用命令setenforce 0
+
+附：
+setenforce 1 设置SELinux 成为enforcing模式
+setenforce 0 设置SELinux 成为permissive模式
+
 
 
 
@@ -77,3 +93,18 @@
 `echo "Asia/Shanghai" > /etc/timezone`
 
 `date`
+
+
+## 安装数据库
+```shell
+systemctl start mariadb     //启动MariaDB
+systemctl stop mariadb      //停止MariaDB
+systemctl restart mariadb   //重启MariaDB
+systemctl enable mariadb    //设置开机启动
+
+
+mysql_secure_installation
+```
+
+
+http://wangqichen:whis.wang1992@git.qncentury.com/yphc/manage.git
