@@ -108,3 +108,42 @@ mysql_secure_installation
 
 
 http://wangqichen:whis.wang1992@git.qncentury.com/yphc/manage.git
+
+
+
+## CentOS 7 SSH连接超时自动断开解决方案
+```shell
+ vi /etc/ssh/sshd_config
+
+ClientAliveInterval 60
+ClientAliveCountMax 5
+
+重启sshd服务
+systemctl restart sshd
+```
+
+## CentOS 7上添加Swap交换空间
+```shell
+创建swap文件
+sudo fallocate -l 4G /swapfile
+ls -lh /swapfile 查看
+
+启用Swap文件
+sudo chmod 600 /swapfile
+ls -lh /swapfile 查看
+sudo mkswap /swapfile
+
+确认一下设置是否已经生效
+swapon -s
+
+使Swap文件永久生效
+sudo vi /etc/fstab
+在文件末尾加入下面这行内容，告诉操作系统自动使用刚才创建的swap文件：
+/swapfile   swap    swap    sw  0   0
+
+更改Swap配置
+sudo vi /etc/sysctl.conf
+vm.swappiness = 10
+
+```
+

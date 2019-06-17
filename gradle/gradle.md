@@ -34,7 +34,7 @@ wget http://apache.fayea.com/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin
 mkdir /opt/maven
 mv apache-maven-3.6.0-bin.tar.gz /opt/maven
 
-cd /opt/maven & tar -zxvf apache-maven-3.6.0-bin.tar.gz
+cd /opt/maven && tar -zxvf apache-maven-3.6.0-bin.tar.gz
 
 vim /etc/profile
 
