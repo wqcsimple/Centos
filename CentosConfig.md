@@ -39,7 +39,7 @@
 - `sudo yum -y install zsh` OR `sudo apt-get install zsh` 如果发现当前系统中没有可进行该命令进行安装，mac下自带
 - `yum install vim git -y`
 - 手动安装
-`git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc`
+`git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc`
 - `git clone git@github.com:wqcsimple/mac_config.git` OR `git clone https://github.com/wqcsimple/mac_config.git` 个人的配置文件github地址
 - `cp ./mac_config/zshrc .zshrc && cp ./mac_config/vimrc .vimrc`
 - `wget https://github.com/downloads/joelthelion/autojump/autojump_v21.1.2.tar.gz` 安装autojump，下载完成后解压`tar zxvf filename` 进入目录`./install.sh`, `[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh`将代码加入到`.zshrc`
@@ -147,3 +147,10 @@ vm.swappiness = 10
 
 ```
 
+
+
+
+## Docker Login
+```
+sudo docker login --username=hi30148838@aliyun.com registry.cn-hangzhou.aliyuncs.com -p whis.wang1992
+```
